@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+
+etiquetas = ["Pacto Historico","Liga Anticorrupcion"]
+valores= [7013648,6371525]
+colores = ["blue","orange"]
+
+plt.pie(x=valores,labels=etiquetas, colors=colores, autopct= "%1.0f%%")
+plt.title("Porcentaje de Votaciones")
+plt.show()
