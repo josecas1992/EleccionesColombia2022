@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots()
+Deptos1 = ["ANT","ATL","BOG","BOL",
+          "BOY","CAL","CAQ","CAS","CAU","CES","CHO",
+          "CON","COR","CUND"]
+Votos1 = {"Pacto Historico":[942005, 672832, 2253997, 493041, 264270, 
+                            187346, 72816, 57331, 515074, 250499, 127846, 114610, 
+                            437016, 624965], 
+         "Liga Anticorrupcion":[1822700, 314551, 1480198, 301952, 
+                                378899, 267988, 88922, 143796, 122693, 215080, 
+                                25736, 185557, 266999, 756454]}
+ax.plot(Deptos1, Votos1["Pacto Historico"], color = "blue", marker = "o")
+ax.plot(Deptos1, Votos1["Liga Anticorrupcion"], color = "orange", marker = "o" )
+ax.grid(axis = 'both', color = 'gray', linestyle = 'dashed')
+
+plt.xlabel("Departamentos")
+plt.ylabel("Cant. Votos en Miles")
+plt.title("Elecciones Presidenciales Colombia 2022")
+plt.show()
